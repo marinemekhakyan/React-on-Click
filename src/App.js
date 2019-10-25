@@ -1,41 +1,71 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
-import "bootstrap/dist/css/bootstrap.min.css";
-
-import CreateTodo from "./components/create-todo.component";
-import EditTodo from "./components/edit-todo.component";
-import TodosList from "./components/todos-list.component";
-
-import logo from "./logo.png";
+import Cards from "./components/Cards";
+import Wrapper from "./components/Wrapper";
+import Heading from "./components/Heading";
+import Footer from "./components/Footer";
+import Jumbotron from "./components/Jumbotron";
+import cards from "./cards.json";
+// import "bootstrap/dist/css/bootstrap.min.css";
+// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class App extends Component {
+  state = {
+    cards,
+    score: 0,
+    topScore: 0,
+    message: "Click an image to start!",
+    clicked: []
+  };
+
+  componentDidMount() {
+    this.setState({ cards: this.shuffle(this.state.cards) });
+  }
+
+  handleOnClick = id => {
+    if (this.state.clicked.includes(id)) {
+      this.setState({
+        cards: this.shuffle(this.state.cards),
+        score: 0,
+        message: "Incorrect!",
+        clicked: []
+      });
+    } else {
+      this.setState({
+        cards: this.shuffle(this.state.cards),
+        score: this.state.score + 1,
+        message: "",
+        clicked: this.state.clicked.concat(id)
+      });
+    }
+  };
+
+  shuffle = pokemons => {
+    let newCards = cards.sort(() => Math.random() - 0.5);
+    return newCards;
+  };
+
   render() {
     return (
-      <Router>
-        <div className="container">
-          <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="https://codingthesmartway.com" target="_blank">
-              <img src={logo} width="30" height="30" alt="CodingTheSmartWay.com" />
-            </a>
-            <Link to="/" className="navbar-brand">Clicky Game</Link>
-            <div className="collpase navbar-collapse">
-              <ul className="navbar-nav mr-auto">
-                <li className="navbar-item">
-                  <Link to="/" className="nav-link">Todos</Link>
-                </li>
-                <li className="navbar-item">
-                  <Link to="/create" className="nav-link">Create Todo</Link>
-                </li>
-              </ul>
-            </div>
-          </nav>
-          <br/>
-          <Route path="/" exact component={TodosList}/>
-          <Route path="/edit/:id" component={EditTodo}/>
-          <Route path="/create" component={CreateTodo}/>
-        </div>
-      </Router>
+      <div>
+        <Jumbotron
+        message = {this.state.message}
+        score = {this.state.score}
+        topScore = {this.state.topScore}
+        ></Jumbotron>
+        <Heading />
+        <Wrapper>
+          {this.state.cards.map(card => (
+            <Cards
+            key = {card.id}
+            id = {card.id}
+            name = {card.name}
+            image = {card.image}
+            handleOnClick = { this.handleOnClick }
+            />
+          ))}
+        </Wrapper>
+        <Footer />
+      </div>
     );
   }
 }
