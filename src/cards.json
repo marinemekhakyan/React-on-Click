@@ -2,74 +2,74 @@
     {
       "id": 1,
       "name": "Audrey Hepburn",
-      "image": ""
+      "image": "./images/audrey.jpg"
     },
 
     {
       "id": 2,
       "name": "John Lennon",
-      "image": ""
+      "image": "./images/lennon.jpg"
     },
 
     {
-        "id": 2,
+        "id": 3,
         "name": "Twiggy",
-        "image": ""
+        "image": "./images/bored.jpg"
     },
 
     {
-        "id": 2,
+        "id": 4,
         "name": "Barack Obama",
-        "image": ""
+        "image": "./images/obama.jpg"
     },
 
     {
-        "id": 2,
+        "id": 5,
         "name": "Michael Jackson",
-        "image": ""
+        "image": "./images/jackson.jpg"
     }, 
 
     {
-        "id": 2,
+        "id": 6,
         "name": "St. Mary Bubble",
-        "image": ""
+        "image": "./images/bubble.jpg"
     },
 
     {
-        "id": 2,
+        "id": 7,
         "name": "Michaelangelo's David",
-        "image": ""
+        "image": "./images/david.jpg"
     },
 
 
     {
-        "id": 2,
+        "id": 8,
         "name": "Sistine",
-        "image": ""
+        "image": "./images/sistine.jpg"
     },
 
     {
-        "id": 2,
+        "id": 9,
         "name": "Marylin Monroe",
-        "image": ""
+        "image": "./images/monroe.jpg"
     },
 
     {
-        "id": 2,
+        "id": 10,
         "name": "Rihanna",
-        "image": ""
+        "image": "./images/riri.jpg"
     },
 
     {
-        "id": 2,
+        "id": 11,
         "name": "Salvador Dali",
-        "image": ""
+        "image": "./images/dali.jpg"
     },
 
     {
-        "id": 2,
+        "id": 12,
         "name": "Frida",
-        "image": ""
+        "image": "./images/frida.jpg"
     }
 
 ]

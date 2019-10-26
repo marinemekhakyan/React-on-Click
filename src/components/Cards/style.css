@@ -11,12 +11,7 @@
     border-style: solid;
   }
 
-  .cards > .img-container {
-    height: 100%;
-    overflow: hidden;
-    text-align: center;
-  
-  }
-  .cards > .img-container > img {
-    width: 90%
-  }
+img {
+    width: 240px;
+    height: 240px;
+}

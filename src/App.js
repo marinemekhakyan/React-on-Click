@@ -5,8 +5,6 @@ import Heading from "./components/Heading";
 import Footer from "./components/Footer";
 import Jumbotron from "./components/Jumbotron";
 import cards from "./cards.json";
-// import "bootstrap/dist/css/bootstrap.min.css";
-// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class App extends Component {
   state = {
@@ -18,7 +16,9 @@ class App extends Component {
   };
 
   componentDidMount() {
+    console.log(this.state.cards)
     this.setState({ cards: this.shuffle(this.state.cards) });
+  
   }
 
   handleOnClick = id => {
@@ -33,6 +33,7 @@ class App extends Component {
       this.setState({
         cards: this.shuffle(this.state.cards),
         score: this.state.score + 1,
+        topScore: this.state.score + 1 > this.state.topScore ? this.state.score + 1 : this.state.topScore,
         message: "",
         clicked: this.state.clicked.concat(id)
       });
@@ -48,19 +49,19 @@ class App extends Component {
     return (
       <div>
         <Jumbotron
-        message = {this.state.message}
-        score = {this.state.score}
-        topScore = {this.state.topScore}
+          message={this.state.message}
+          score={this.state.score}
+          topScore={this.state.topScore}
         ></Jumbotron>
         <Heading />
         <Wrapper>
           {this.state.cards.map(card => (
             <Cards
-            key = {card.id}
-            id = {card.id}
-            name = {card.name}
-            image = {card.image}
-            handleOnClick = { this.handleOnClick }
+              key={card.id}
+              id={card.id}
+              name={card.name}
+              image={card.image}
+              handleOnClick={this.handleOnClick}
             />
           ))}
         </Wrapper>
