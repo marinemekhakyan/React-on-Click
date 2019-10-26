@@ -18,22 +18,17 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "development": [
+    "last 1 chrome version",
+    "last 1 firefox version",
+    "last 1 safari version"
+  ],
   "browserslist": {
     "production": [
       ">0.2%",
       "not dead",
       "not op_mini all"
     ],
-
-    "homepage": "https://myusername.github.io/my-app",
-
-    "scripts": {
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d build",
-          "start": "react-scripts start",
-          "build": "react-scripts build"},
-
-    
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",

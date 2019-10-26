@@ -40,7 +40,7 @@ class App extends Component {
     }
   };
 
-  shuffle = pokemons => {
+  shuffle = cards => {
     let newCards = cards.sort(() => Math.random() - 0.5);
     return newCards;
   };

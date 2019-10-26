@@ -3,7 +3,7 @@ import "./style.css";
 
 function Cards(props) {
     return (
-        <div className="cards">
+        <div id="container"><div className="cards">
             <div className="img-container">
                 <img
                 alt={props.name}
@@ -12,7 +12,7 @@ function Cards(props) {
                 onClick={() => props.handleOnClick(props.id)}
                 />
             </div>
-        </div>
+        </div></div>
     );
 }
 
