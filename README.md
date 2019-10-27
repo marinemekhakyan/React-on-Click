@@ -2,4 +2,8 @@
 
 # **POP ART Memory Game**
 
-Play here https://marinemekhakyan.github.io/react-on-click/
+## Built with React
+
+Some funky images I'd like to have on my walls - brought to the world in this memory game! The challenge is to memorize all images and click on each one not more than once. 
+
+Enjoy! https://marinemekhakyan.github.io/react-on-click/
