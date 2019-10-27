@@ -6,8 +6,8 @@ function Jumbotron (props) {
         <div className="jumbotron">
             <ul>
                 <span id="title">Pop Art Memory Game</span>
-                <p><strong id="message">{props.message}</strong></p>
-                <p>Score: {props.score} | Top Score: {props.topScore}</p>
+                <strong><h3 id="message">{props.message}</h3></strong>
+                <strong><p id="score">Score: {props.score} | Top Score: {props.topScore}</p></strong>
             </ul>
         </div>
     );

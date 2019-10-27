@@ -1,15 +1,21 @@
 .jumbotron {
-    height: 200px;
-    /* background-color: rgba(38, 214, 214, 0.349); */
     text-align: center;
+
 }
 
 #title {
     font-family: 'Fascinate Inline', cursive;
     font-size: 60px;
+    color: #E0004D;
+    text-shadow: 2px 2px yellow;
 }
 
 #message, p {
     font-size: 25px;
     font-family: 'Comfortaa', cursive;
+}
+
+#score {
+    color: #E0004D;
+    text-shadow: 2px 2px yellow;
 }

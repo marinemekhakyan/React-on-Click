@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Cards from "./components/Cards";
 import Wrapper from "./components/Wrapper";
 import Heading from "./components/Heading";
-import Footer from "./components/Footer";
 import Jumbotron from "./components/Jumbotron";
 import cards from "./cards.json";
 
@@ -11,7 +10,7 @@ class App extends Component {
     cards,
     score: 0,
     topScore: 0,
-    message: "Click an image to start!",
+    message: "Each art piece must only be clicked once! Click on one to start!",
     clicked: []
   };
 
@@ -65,7 +64,6 @@ class App extends Component {
             />
           ))}
         </Wrapper>
-        <Footer />
       </div>
     );
   }
