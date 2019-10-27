@@ -1,4 +1,4 @@
-<img src="https://png.pngtree.com/element_our/sm/20180509/sm_5af2b8924a630.png" alt="drawing" width="200"/>
+<img src="https://github.com/marinemekhakyan/react-on-click/blob/master/public/images/readme.png?raw=true" alt="drawing" width="200"/>
 
 # **POP ART Memory Game**
 
