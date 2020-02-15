@@ -10,6 +10,7 @@ function Jumbotron (props) {
                 <strong><p id="score">Score: {props.score} | Top Score: {props.topScore}</p></strong>
             </ul>
         </div>
+    
     );
 }
 
